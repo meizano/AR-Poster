@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Testing Final-02 </title>
+    <script src="aframe/library/aframe.min.js"></script>
+    <!-- include aframe-ar.js -->
+    <script src="aframe/library/aframe-ar.js"></script>
+    <!-- include text geometry -->
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+    <!-- Hide Debug UI -->
+    <!--
+    <style>
+        #arjsDebugUIContainer {
+            display: none;
+            visibility: hidden;
+        }
+    </style>
+-->
+</head>
+
+<a-assets>
+  <a-asset-item id="mp4" src="kamus_lampung.mp4"></a-asset-item>
+
+  <img id="sertifikat-paten" src="./assets/sertifikat-paten.jpg">
+
+
+
+<a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
+</a-assets>
+
+ <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+    <a-scene embedded vr-mode-ui="enabled: true" arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;'>
+
+<a-entity camera></a-entity>
+
+
+
+        <!-- handle matrix marker -->
+       			<a-marker type='barcode' value='10'>
+       					<a-plane position="0 0 0" opacity="0" rotation="-90 0 0">
+       					<a-plane line__10="start: -0.3 0 0; end: 2 0 0; color:#FF6100;" opacity="0"></a-plane>
+       					<a-circle color="red" radius="0.3" position="-2 1.5 0" >
+       					<a-text width="8" value="01" color="black" align="center" postion="0 0 0"></a-text>
+       					</a-circle>
+
+       					<a-text position="-1.6 1.5 0" width="7" value="PEMOHON ATAU KUASA" color="red"></a-text>
+
+       					<a-plane width="3.7" height="1" position="0 0.7 0" color="white">
+       					<a-text position="-1.8 0.2 0.1" width="4" value="Pemohon/Kuasa mengisi formulir \n Pemohon/Kuasa melampirkan semua kelengkapan permohonan" color="black" ></a-text>
+
+       				</a-plane>
+       				</a-plane>
+       			</a-marker>
+
+       			<a-marker type='barcode' value='3'>
+       					<a-plane position="0 0 0" opacity="0" rotation="-90 0 0">
+       					<a-plane line__10="start: -0.3 0 0; end: 2 0 0; color:#FFC500;" opacity="0"></a-plane>
+       					<a-circle color="#FFC500" radius="0.3" position="-2 1.5 0" >
+       					<a-text width="8" value="02" color="black" align="center" position="0 0 0"></a-text>
+       					</a-circle>
+
+       					<a-text position="-1.6 1.5 0" width="7" value="CUSTOMER SERVICE (VERIFICATOR)" color="#FFD700"></a-text>
+
+       					<a-plane width="3.7" height="1" position="0 0.7 0" color="white">
+       					<a-text position="-1.8 0.2 0.1" width="4" value="1.Verifikator melakukan pemeriksaan \n kelengkapan permohonan \n 2.Verifikator memberi perintah bayar" color="black" ></a-text>
+
+       				</a-plane>
+       				</a-plane>
+       		</a-marker>
+
+
+
+       			<a-marker type='barcode' value='9'>
+                <a-plane position="0 0 0" opacity="0" rotation="-90 0 0">
+                <a-plane line__10="start: -0.3 0 0; end: 2 0 0; color:#FF0064;" opacity="0"></a-plane>
+                <a-circle color="#FF0064" radius="0.3" position="-2 1.5 0" >
+                <a-text width="8" value="03" color="white" align="center" position="0 0 0.1"></a-text>
+                </a-circle>
+
+                <a-text position="-1.6 1.5 0" width="7" value="BANK BRI" color="#FF0064"></a-text>
+                        
+                <a-plane width="3.3" height="1" position="0.1 0.7 0" color="white">
+                <a-text position="-1.6 0.2 0" width="4" value="1.Pemohon melakukan pembayaran \n 2.BRI memberikan bukti pembayaran" color="black" ></a-text>
+                            
+                </a-plane>
+                </a-plane>
+          </a-marker>
+
+
+            <a-marker type='barcode' value='13'>
+                <a-plane position="0 0 0" opacity="0" rotation="-90 0 0">
+                <a-plane line__10="start: -0.3 0 0; end: 2 0 0; color:#33eff8;" opacity="0"></a-plane>
+                <a-circle color="cyan" radius="0.3" position="-2 1.5 0" >
+                <a-text width="8" value="04" color="white" align="center" position="0 0 0.1"></a-text>
+                </a-circle>
+
+                <a-text position="-1.6 1.5 0" width="7" value="LOKET PERMOHONAN" color="cyan" ></a-text>
+
+                <a-plane width="3.7" height="1.5" position="0.1 0.5 0" color="white">
+                <a-text position="-1.8 0.1 0.2" width="4" value="Pemohon menyerahkan: \n -Formulir yang telah diisi lengkap \n -Kelengkapan permohonan \n -Bukti pembayaran dari BRI \n
+                Petugas Loket memberikan bukti penerimaan permohonan" color="black" ></a-text>
+                        
+
+                </a-plane>
+                </a-plane>
+
+          </a-marker>
+
+                <a-marker type='barcode' value='6'>
+                  <a-plane position="0 0 0" opacity="0" rotation="-90 0 0">
+                  <a-image src="#sertifikat-paten" align="center" position="0 0 0.1" width="3" height="3"></a-image>
+                  </a-plane>
+
+                </a-marker>
+
+
+<!--  -->
+            <a-marker type='barcode' value='19'>
+                  <a-plane position="0 0 0" opacity="0" rotation="-90 0 0">
+                  <a-image src="#mp4" align="center" position="0 0 0.1" width="3" height="3"></a-image>
+                  </a-plane>
+
+                </a-marker>
+
+
+                
+		<a-entity camera></a-entity>
+        
+
+    </a-scene>
+</body>
+
+</html>
+
+
+
+
+
+       						
+
+
+
+
+                            
+
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
