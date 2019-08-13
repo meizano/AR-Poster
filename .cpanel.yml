@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/haki/public_html/poster/
+    - /bin/cp -R . $DEPLOYPATH
